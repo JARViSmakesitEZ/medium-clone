@@ -1,0 +1,7 @@
+:: why we did declarations to true in tsconfig file?DOUBT
+:: how to deploy to npm has the answer to it
+:: in short: if you want to publish a project to npm, you should not just publish your javascript bits but also publishh your types and thats what declarations lets you do, it creates a .d.ts file that you publish to npm(week 12 video on npm checkout)
+:: the question now is, how can my backend or frontend access this common module?
+:: like this: import signupInput from ../../...../common/src/index.ts? , though can might do it like this, but in the end your project should never have these very large absolute paths to a seperate module, backend doesn't and shouldn't even know what common is
+:: so what you ideally want is convert the common into a monorepo but as of now you ideally want to convert the common into a npm module
+:: 
